@@ -1,26 +1,49 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 150vh;
+  margin: 0%;
+  padding: 0%;
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr) .7fr 1.5fr;
+  grid-template-areas: "lg lg lg lg intro intro intro intro"
+                       "lg lg lg lg extra extra extra extra"
+                       "abt abt abt-con abt-con abt-con abt-con abt-con abt-con"
+                       "info-con info-con info-con illust1 illust1 info info info"
+                       "skills skills skills skills skills skills skills skills "
+                       "sk1 sk1 sk1 sk2 sk2 sk2 illust2 illust2";
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
+.container > * {
+  background-color: #a5a58d;
+  /* border-style: solid;
+  border-width: 2px; */
+
+  /*center items, use flexbox*/
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
+
+.logo { grid-area: lg;}
+.intro_main { grid-area: intro;}
+.intro_extra { grid-area: extra;}
+.about { grid-area: abt;}
+.about_content { grid-area: abt-con;}
+.info_content { grid-area: info-con;}
+.illust_1 { grid-area: illust1;}
+.info { grid-area: info;}
+.skills { grid-area: skills;}
+.skills_1 { grid-area: sk1;}
+.skills_2 { grid-area: sk2;}
+.illust_2 { grid-area: illust2;}
+
 
 .footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
+  border-top: 3px solid #ffffff;
+  background-color:#a5a58d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +56,10 @@
   flex-grow: 1;
 }
 
-.title a {
+/* .title a {
   color: #0070f3;
   text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .title a:hover,
@@ -59,63 +83,4 @@
   line-height: 1.5;
   font-size: 1.5rem;
 }
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+ */
