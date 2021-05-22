@@ -1,20 +1,22 @@
-import styles from '../styles/Home.module.css'
-import Image from 'next/image'
+import ContactCircle from "./ContactCircle";
+
 
 const Footer = () => {
     return (
-        <footer className={styles.footer}>
-            <a
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Powered by{' '}
-                <span className={styles.logo}>
-                    <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                </span>
-            </a>
-            <h3>This is inside the footer</h3>
+        <footer>
+            <ContactCircle />
+            <div><h3>Created by Gillianne Papasin</h3>
+                <h4><a className="links" href="https://github.com/cippylol">GitHub</a> | <a className="links" href="https://sg.linkedin.com/in/gillianne-papasin/">LinkedIn</a> | <a className="links" href="https://www.behance.net/gillianpapasin">Behance</a>
+                </h4>
+            </div>
+
+            <div>
+                <h4>Come and say hi, I'd love to hear more about your project!</h4>
+                <p>Email me at: <a href="mailto:gillmrpapasin@gmail.com">gillmrpapasin@gmail.com</a></p>
+            </div>
+
+
+
         </footer>
     );
 }

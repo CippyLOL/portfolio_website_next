@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@700&family=Libre+Barcode+128&family=Prompt:wght@300&display=swap');
+
+/* font-family: 'Eczar', serif;
+font-family: 'Libre Barcode 128', cursive;
+font-family: 'Prompt', sans-serif; */
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #ffffff;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: 'Prompt', sans-serif; ;
+
+  background-color: #000000;
+}
+
+/* highlight */
+::selection {
+  background: #ab3f3d;
+}
+
+h1 {
+  font-family: 'Eczar', serif;
 }
 
 a {
@@ -19,20 +36,26 @@ a {
 nav {
   display: flex;
   background-color: #a5a58d;
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #000000;
   padding-left: 2%;
+  font-weight: bolder;
+  /* margin-bottom: -25px; */
 }
 
 .sticky {
+  position:fixed;  
+  z-index:1; 
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+  margin-bottom: -25px;
 }
 
 nav > h1 {
-  font-size: 1.5em;
+  font-size: 2.5em;
   flex-grow: 4;
   text-align: start;
+  font-family: 'Libre Barcode 128', cursive
 }
 
 .nav-bar {
@@ -45,8 +68,42 @@ nav > h1 {
   
 }
 
-/* footer here too ! */
 
-.footer {
-  background-color:  #a5a58d;
+footer {
+  width: 100%;
+  min-height: 150px;
+  border-top: 3px solid #000000;
+  background-color:#a5a58d;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
 }
+
+footer > * {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+footer > div {
+  text-align: start;
+}
+
+
+p > a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+
+.links:hover {
+  color: #ffffff;
+text-decoration: underline;
+}
+

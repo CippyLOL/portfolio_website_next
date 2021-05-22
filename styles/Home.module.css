@@ -1,5 +1,5 @@
 .container {
-  min-height: 150vh;
+  min-height: 170vh;
   margin: 0%;
   padding: 0%;
   display: grid;
@@ -9,7 +9,7 @@
   grid-template-areas: "lg lg lg lg intro intro intro intro"
                        "lg lg lg lg extra extra extra extra"
                        "abt abt abt-con abt-con abt-con abt-con abt-con abt-con"
-                       "info-con info-con info-con illust1 illust1 info info info"
+                       "info-con info-con info-con info-con illust1 illust1 illust1 info"
                        "skills skills skills skills skills skills skills skills "
                        "sk1 sk1 sk1 sk2 sk2 sk2 illust2 illust2";
 }
@@ -23,38 +23,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.logo { grid-area: lg;}
-.intro_main { grid-area: intro;}
-.intro_extra { grid-area: extra;}
+.logo { grid-area: lg; overflow: hidden; padding-right: 7%;}
+.intro_main { grid-area: intro; text-align: center;}
+.intro_extra { grid-area: extra; text-align: end;}
+.intro_extra > * {
+  color: #ab3f3d;
+}
 .about { grid-area: abt;}
 .about_content { grid-area: abt-con;}
 .info_content { grid-area: info-con;}
-.illust_1 { grid-area: illust1;}
+.info_content > h2 > span {
+text-decoration: underline;
+}
+.illust_1 { grid-area: illust1; overflow: hidden; padding-right: 5%;}
 .info { grid-area: info;}
+.info > h1 {
+  writing-mode: vertical-lr;
+  /* text-orientation: upright; */
+}
 .skills { grid-area: skills;}
 .skills_1 { grid-area: sk1;}
 .skills_2 { grid-area: sk2;}
-.illust_2 { grid-area: illust2;}
-
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 3px solid #ffffff;
-  background-color:#a5a58d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.skills_1 > ul, .skills_2 > ul {
+  list-style-type: circle;
 }
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.skills_1 > *, .skills_2 > * {
+  justify-self: start;
 }
+.illust_2 { grid-area: illust2; overflow: hidden; padding-right: 5%;}
+
 
 /* .title a {
   color: #0070f3;
