@@ -1,13 +1,11 @@
+
 import Head from 'next/head'
 import ContactCircle from '../components/ContactCircle'
-// import Illust_1 from '../components/Illust_1'
-// import Illust_2 from '../components/Illust_2'
-// import Illust_3 from '../components/Illust_3'
-import styles from '../styles/Contact.module.css'
+import styles from '../styles/Works.module.css'
 
 
-export default function Contact() {
-    var pageTitle = "Contact"
+export default function Works() {
+    var pageTitle = "Works"
     return (
         <div>
             <Head>
@@ -26,5 +24,3 @@ export default function Contact() {
         </div>
     )
 }
-
-

@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Illust_1 from '../components/Illust_1'
 import Illust_2 from '../components/Illust_2'
 import Illust_3 from '../components/Illust_3'
-import Logo from '../components/Logo'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -22,7 +20,7 @@ export default function Home() {
           <h2>Hey, I'm Gill and I make stuff.</h2>
         </div>
         <div className={styles.intro_extra}>
-          <h1>A creative - developing <span style={{ textDecoration: 'underline' }}>and</span> designing today's and the future's of application layouts.</h1>
+          <h1>A creative - developing and designing today's and the <span style={{ textDecoration: 'underline' }}>future's</span> of application layouts.</h1>
         </div>
         <div className={styles.about}>
           <h1>About</h1>
