@@ -14,21 +14,30 @@ const customCursor = {
 
 const CustomCursor = () => {
 
-    const cursorRef = React.useRef(null);
+    const customRef = React.useRef(null);
+
+
 
 
     React.useEffect(() => {
-        document.addEventListener("mousemove", (event) => {
-            const { clientX, clientY } = event;
-            const mouseX = clientX - cursorRef.current.clientWidth / 2;
-            const mouseY = clientY - cursorRef.current.clientHeight / 2;
-            cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-        })
-    })
+        const onMouseMove = (e) => {
+            const { clientX, clientY } = e
+            const mouseX = clientX - customRef.current.clientWidth / 2
+            const mouseY = clientY - customRef.current.clientHeight / 2
+            customRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
+        }
+        // add the event listener
+        document.addEventListener('mousemove', onMouseMove)
+        // cleanup function
+        return () => {
+            // remove the event listener when the component unmounts
+            document.removeEventListener('mousemove', onMouseMove)
+        }
+    }, [])
 
     return (
         <div>
-            <div style={customCursor} ref={cursorRef}></div>
+            <div style={customCursor} ref={customRef}></div>
         </div>
 
     );

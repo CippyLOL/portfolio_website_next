@@ -20,7 +20,7 @@ export default function Home() {
           <h2>Hey, I'm Gill and I make stuff.</h2>
         </div>
         <div className={styles.intro_extra}>
-          <h1>A creative - developing and designing today's and the <span style={{ textDecoration: 'underline' }}>future's</span> of application layouts.</h1>
+          <h1>A creative - developing and designing today's and the <span style={{ textDecoration: 'underline' }}>future's</span> application layouts.</h1>
         </div>
         <div className={styles.about}>
           <h1>About</h1>
