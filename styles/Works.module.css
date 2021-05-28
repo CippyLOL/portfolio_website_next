@@ -1,7 +1,7 @@
 
 
 .container {
-  min-height: 170vh;
+  min-height: 100vh;
   margin: 0%;
   padding: 1em;
   background-color: #a5a58d;
@@ -18,7 +18,8 @@
 }
 
 .container > * > h3 {
-  font-size: 4em;
+  font-size: 3em;
+  word-wrap: break-word; 
 }
 
 .container > * > h3 > span:hover {

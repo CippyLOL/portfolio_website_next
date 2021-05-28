@@ -14,14 +14,14 @@ export default function Works() {
             </Head>
             <div className={styles.container}>
                 <h1>{pageTitle}</h1>
-                <div>
+                <div classsName={styles.programming}>
                     <h2>Programming Projects</h2>
                     <h3>/<Link href="#"><span>DevHub</span></Link>/
                     <Link href="#"><span>DJ_App</span></Link>/
                     <Link href="https://gilliannepapasin.com/"><span>Porfolio</span></Link>
                     </h3>
                 </div>
-                <div>
+                <div className={styles.design}>
                     <h2>Design Projects</h2>
                     <h3>
                         /<Link href="#"><span>GET_TGT</span></Link>/
