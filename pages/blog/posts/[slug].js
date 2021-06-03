@@ -51,7 +51,7 @@ export default function PostDetails({ post }) {
     return (
         <div>
             <Head>
-                <title>Contact | Portfolio</title>
+                <title>{title}</title>
                 <meta property="og:post" content="Post | Portfolio" key="post" />
             </Head>
             <div className={styles.container}>

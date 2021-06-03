@@ -37,7 +37,7 @@ a {
 
 nav {
   display: flex;
-  background-color: #a5a58d;
+  background-color: whitesmoke;
   border-bottom: 3px solid #000000;
   padding-left: 2%;
   font-weight: bolder;
@@ -75,7 +75,7 @@ footer {
   width: 100%;
   min-height: 150px;
   border-top: 3px solid #000000;
-  background-color:#a5a58d;
+  background-color: whitesmoke;
   padding-left: 5%;
   padding-right: 5%;
   display: grid;
@@ -100,12 +100,44 @@ footer > div {
 
 
 p > a:hover {
-color: #ffffff;
+color: aqua;
 text-decoration: underline;
 }
 
 .links:hover {
-  color: #ffffff;
+  color: aqua;
 text-decoration: underline;
 }
 
+@media only screen and (min-width: 280px) and (max-width: 500px) {
+  .sticky{flex-direction: column; justify-content: center; align-items: center;}
+  .nav-bar{flex-direction: column; padding-bottom: 30px;}
+  .nav-bar > a {font-size: 30px;}
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    /* align-items: flex-start;
+    justify-content: center; */
+  
+  }
+
+  footer > * {
+    align-items: center;  
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 720px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    /* align-items: flex-start;
+    justify-content: center; */
+  
+  }
+
+  footer > * {
+    align-items: center;  
+  }
+}

@@ -30,7 +30,7 @@ export default function PostCard({ post }) {
     return (
         <div className="card" style={cardPostStyle}>
             <h2 style={titleStyle}><Link href={'/blog/posts/' + slug}><a>{title}</a></Link>
-             / <span style={{ color: '#000' }}><Moment format="DDMMYY">{publishDate}</Moment></span></h2>
+             / <span style={{ color: '#000' }}><Moment format="DD.MM.YY">{publishDate}</Moment></span></h2>
             <p>{description}</p>
             {/* <Moment date={updatedAt} /> <br /> */}
             <br />

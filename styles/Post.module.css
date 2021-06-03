@@ -4,7 +4,7 @@
 
     margin: 0%;
     min-height: 70vh;
-    background-color: #a5a58d;
+    background-color: whitesmoke;
 
     display: grid;
     grid-template-columns: 0.5fr 2fr;
@@ -34,7 +34,7 @@
 
 
 .container > * > p > img {
-    max-height: 35vh;
+    max-height: 40vh;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -42,4 +42,28 @@
 
 .container > * > h1{
     font-size: 2.5rem;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 500px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .container > * > p > img {
+    max-height: 25vh;
+
+}
+}
+
+@media only screen and (min-width: 501px) and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    .container > * > p > img {
+      max-height: 40vh;
+  
+  }
 }

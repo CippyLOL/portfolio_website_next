@@ -15,7 +15,7 @@
 }
 
 .container > * {
-  background-color: #a5a58d;
+  background-color: whitesmoke;
   /* border-style: solid;
   border-width: 2px; */
 
@@ -58,31 +58,41 @@ text-decoration: underline;
 .illust_2 { grid-area: illust2; overflow: hidden; padding-right: 5%;}
 
 
-/* .title a {
-  color: #0070f3;
-  text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@media only screen and (min-width: 280px) and (max-width: 500px) {
+ .container {
+  grid-template-rows: repeat(3, 1fr) 0.3fr 1fr 0.3fr repeat(2, 1fr) 0.3fr repeat(3,1fr);
+  grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: "lg lg"
+                        "intro intro"
+                        "extra extra"
+                        "abt abt"
+                        "abt-con abt-con"
+                        "info info"
+                        "info-con info-con"
+                        "illust1 illust1"
+                        "skills skills"
+                        "sk1 sk1"
+                        "sk2 sk2"
+                        "illust2 illust2";
+ }
+ .logo {padding-right: 14%;}
+ .info > h1 { writing-mode: horizontal-tb; }
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+@media only screen and (min-width: 501px) and (max-width: 720px) {
+  .container {
+    grid-template-rows: repeat(2, 1fr) 0.3fr 1fr 0.3fr repeat(2, 1fr) 0.3fr repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "lg lg"
+                         "intro extra"
+                         "abt abt"
+                         "abt-con abt-con"
+                         "info info"
+                         "info-con info-con"
+                         "illust1 illust1"
+                         "skills skills"
+                         "sk1 sk2"
+                         "illust2 illust2";
+  }
+  .info > h1 { writing-mode: horizontal-tb; }
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
- */

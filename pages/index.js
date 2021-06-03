@@ -39,7 +39,7 @@ export default function Home() {
           <p>
             I provide solutions to your creative problems to achieve results that suits your needs. <br />
             As a well-rounded individual in the field of programming and design, I analyse and implement design thinking skills and do user research as well as turning them into a reality.
-            To learn more check out my <Link href="/works"><a style={{ color: 'white' }}>Works</a></Link>.
+            To learn more check out my <Link href="/works"><a style={{ color: 'blue' }}>Works</a></Link>.
 
           </p>
         </section>
